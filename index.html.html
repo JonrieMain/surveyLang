@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body{
+			padding: 0 .4rem;
+			overflow: hidden;
+			transition: .5s linear;
+		}
+		.mes{
+			font-size: 8rem;
+			word-break: break-word;
+			text-align: center;
+			z-index: -1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 100%;
+			color: #fff;
+		}
+		.con{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			z-index: 100000;
+		}
+		.con h3{
+			text-align: center;
+			margin-bottom: 1.5rem;
+			word-break: break-word;
+			text-transform: uppercase;
+		}
+		.con span button{
+			padding: .5rem 2rem;
+			cursor: pointer;
+		}
+
+		@keyframes mes{
+			0%{
+				left: 0;
+			}
+			100%{
+				left: 130%;
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	
+
+	<h1 class="mes">I love youu hehe</h1>
+
+	<div class="con">
+		<h3 class="res">Crush mo ba ako?</h3>
+		<span>
+			<button class="yes">Yes</button>
+			<button class="no">No</button>
+		</span>
+
+	</div>
+	
+</body>
+<script type="text/javascript">
+	const h3 = document.querySelector('.res')
+	const mes = document.querySelector('.mes')
+
+
+	const yes = document.querySelector('.yes').addEventListener('click', ()=>{
+		h3.innerText="Ano pang hinihintay mo? Edi chat mo na ako."
+		h3.style.color="#fff";
+		document.body.style.background="#000";
+		mes.style.animation="mes 10s alternate infinite";
+	})
+	const no = document.querySelector('.no').addEventListener('click', ()=>{
+		alert('Wala ulit hindi pwedeng hindi mo ako crush!😕')
+		location.reload();
+	})
+
+</script>
+</html>

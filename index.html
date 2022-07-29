@@ -16,7 +16,7 @@
 			transition: .5s linear;
 		}
 		.mes{
-			font-size: 8rem;
+			font-size: 13rem;
 			word-break: break-word;
 			text-align: center;
 			z-index: -1;
@@ -25,6 +25,7 @@
 			left: 50%;
 			transform: translate(-50%,-50%);
 			width: 100%;
+			letter-spacing: 3rem;
 			color: #fff;
 		}
 		.con{
@@ -49,21 +50,13 @@
 			cursor: pointer;
 		}
 
-		@keyframes mes{
-			0%{
-				left: 0;
-			}
-			100%{
-				left: 130%;
-			}
-		}
 		
 	</style>
 </head>
 <body>
 	
 
-	<h1 class="mes">I love youu hehe</h1>
+	<h1 class="mes">I <br> love <br>  youu</h1>
 
 	<div class="con">
 		<h3 class="res">Crush mo ba ako?</h3>
@@ -84,7 +77,6 @@
 		h3.innerText="Ano pang hinihintay mo? Edi chat mo na ako."
 		h3.style.color="#fff";
 		document.body.style.background="#000";
-		mes.style.animation="mes 10s alternate infinite";
 	})
 	const no = document.querySelector('.no').addEventListener('click', ()=>{
 		alert('Wala ulit hindi pwedeng hindi mo ako crush!😕')

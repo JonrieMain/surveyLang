@@ -45,10 +45,14 @@
 			word-break: break-word;
 			text-transform: uppercase;
 			background: red;
+			font-size: 3rem;
 		}
 		.con span button{
 			padding: .5rem 2rem;
 			cursor: pointer;
+		}
+		.con span button:nth-child(2):hover{
+			display: none;
 		}
 
 		
@@ -72,17 +76,20 @@
 <script type="text/javascript">
 	const h3 = document.querySelector('.res')
 	const mes = document.querySelector('.mes')
+	const btn = document.querySelectorAll('button')
 
 
 	const yes = document.querySelector('.yes').addEventListener('click', ()=>{
-		h3.innerText="Ano pang hinihintay mo? Edi chat mo na ako."
+		h3.style.display="none"
 		h3.style.color="#fff";
+		btn.forEach((a)=>{
+			a.style.display="none"
+		})
 		document.body.style.background="#000";
+		alert('Ano pang hinihintay mo? Edi chat mo na ako')
 	})
-	const no = document.querySelector('.no').addEventListener('click', ()=>{
-		alert('Wala ulit hindi pwedeng hindi mo ako crush!😕')
-		location.reload();
-	})
+
+	window.addEventListener('contextmenu', (e)=>e.preventDefault())
 
 </script>
 </html>
